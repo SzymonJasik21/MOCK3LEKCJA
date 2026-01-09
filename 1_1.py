@@ -1,12 +1,19 @@
 def f(word):
-    if not word:
-        return ""
-
     wave = []
+    i = 0
+    wynik = ""
+    
 
-    for i in range(len(word)):
-        wrd = word[:i].lower() + word[i].upper() + word[i+1:].lower()
-        wave.append(wrd)
+    while 0 < len(word):
+
+        wave.append(list(word))
+        wave[i] = "-".join(wave)
+
+        wave[i][i] = wave[i][i].upper()
+
+        i+=i
+
+    
 
     return "-".join(wave)
 
