@@ -1,7 +1,5 @@
 def f(word):
-    if not word:
-        return ""
-    
+
     result = []
     for i in range(len(word)):
         chars = list(word.lower())
