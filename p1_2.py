@@ -13,4 +13,3 @@ def f(word):
 
 print(f"water: {f('water')}")
 print(f"a: {f('a')}")
-print(f"pusty ciąg: {f('')}")
