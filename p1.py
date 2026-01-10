@@ -1,14 +1,17 @@
 def f(word):
     if not word:
         return ""
-
-    wave = []
-
+    
+    result = []
     for i in range(len(word)):
-        wrd = word[:i].lower() + word[i].upper() + word[i+1:].lower()
-        wave.append(wrd)
-
-    return "-".join(wave)
+        chars = list(word.lower())
+        chars[i] = chars[i].upper()
+        result.append("".join(chars))
+    
+    return "-".join(result)
 
 if __name__ == "__main__":
-    print(f"water")
+    print(f(f"water"))
+    print(f(f"a"))
+
+    
