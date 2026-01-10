@@ -11,4 +11,6 @@ def f(word):
     return "-".join(wave)
 
 if __name__ == "__main__":
-    print(f"water")
+    print(f("water"))
+
+
