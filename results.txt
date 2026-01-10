@@ -2,20 +2,20 @@ test_p1 (__main__.Test.test_p1) ... ok
 test_p10 (__main__.Test.test_p10) ... ERROR
 test_p11 (__main__.Test.test_p11) ... ERROR
 test_p12 (__main__.Test.test_p12) ... ERROR
-test_p2 (__main__.Test.test_p2) ... ERROR
+test_p2 (__main__.Test.test_p2) ... ok
 test_p3 (__main__.Test.test_p3) ... ok
 test_p4 (__main__.Test.test_p4) ... ok
 test_p5 (__main__.Test.test_p5) ... ok
 test_p6 (__main__.Test.test_p6) ... ok
 test_p7 (__main__.Test.test_p7) ... ERROR
-test_p8 (__main__.Test.test_p8) ... ERROR
-test_p9 (__main__.Test.test_p9) ... ERROR
+test_p8 (__main__.Test.test_p8) ... ok
+test_p9 (__main__.Test.test_p9) ... ok
 
 ======================================================================
 ERROR: test_p10 (__main__.Test.test_p10)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "c:\Users\s-A121-16\Desktop\Nowy folder (2)\MOCK3LEKCJA\check-mocktest3.py", line 130, in test_p10
+  File "c:\Users\szymo\OneDrive\Pulpit\MOCK3LEKCJA\check-mocktest3.py", line 130, in test_p10
     import p10
 ModuleNotFoundError: No module named 'p10'
 
@@ -23,7 +23,7 @@ ModuleNotFoundError: No module named 'p10'
 ERROR: test_p11 (__main__.Test.test_p11)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "c:\Users\s-A121-16\Desktop\Nowy folder (2)\MOCK3LEKCJA\check-mocktest3.py", line 140, in test_p11
+  File "c:\Users\szymo\OneDrive\Pulpit\MOCK3LEKCJA\check-mocktest3.py", line 140, in test_p11
     import p11
 ModuleNotFoundError: No module named 'p11'
 
@@ -31,44 +31,22 @@ ModuleNotFoundError: No module named 'p11'
 ERROR: test_p12 (__main__.Test.test_p12)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "c:\Users\s-A121-16\Desktop\Nowy folder (2)\MOCK3LEKCJA\check-mocktest3.py", line 153, in test_p12
+  File "c:\Users\szymo\OneDrive\Pulpit\MOCK3LEKCJA\check-mocktest3.py", line 153, in test_p12
     import p12
 ModuleNotFoundError: No module named 'p12'
-
-======================================================================
-ERROR: test_p2 (__main__.Test.test_p2)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "c:\Users\s-A121-16\Desktop\Nowy folder (2)\MOCK3LEKCJA\check-mocktest3.py", line 27, in test_p2
-    p = p2.C(2, 3)
-        ^^^^
-AttributeError: module 'p2' has no attribute 'C'
 
 ======================================================================
 ERROR: test_p7 (__main__.Test.test_p7)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "c:\Users\s-A121-16\Desktop\Nowy folder (2)\MOCK3LEKCJA\check-mocktest3.py", line 94, in test_p7
+  File "c:\Users\szymo\OneDrive\Pulpit\MOCK3LEKCJA\check-mocktest3.py", line 94, in test_p7
     import p7
-ModuleNotFoundError: No module named 'p7'
-
-======================================================================
-ERROR: test_p8 (__main__.Test.test_p8)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "c:\Users\s-A121-16\Desktop\Nowy folder (2)\MOCK3LEKCJA\check-mocktest3.py", line 110, in test_p8
-    import p8
-ModuleNotFoundError: No module named 'p8'
-
-======================================================================
-ERROR: test_p9 (__main__.Test.test_p9)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "c:\Users\s-A121-16\Desktop\Nowy folder (2)\MOCK3LEKCJA\check-mocktest3.py", line 121, in test_p9
-    import p9
-ModuleNotFoundError: No module named 'p9'
+  File "c:\Users\szymo\OneDrive\Pulpit\MOCK3LEKCJA\p7.py", line 2
+    def __init__(self,)
+                       ^
+SyntaxError: expected ':'
 
 ----------------------------------------------------------------------
-Ran 12 tests in 0.016s
+Ran 12 tests in 0.057s
 
-FAILED (errors=7)
+FAILED (errors=4)
