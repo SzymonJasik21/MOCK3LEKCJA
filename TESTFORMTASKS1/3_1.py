@@ -1,6 +1,6 @@
 class BankAccount:
-    def __init__(self, account_number):
-        self.number = account_number
+    def __init__(self, number):
+        self.number = number
         self.balance = 0.0
 
     def deposit(self, amount):
@@ -9,15 +9,14 @@ class BankAccount:
     def withdraw(self, amount):
         if amount <= self.balance:
             self.balance -= amount
-            return True
+            return ""
         else:
-            return False
+            return "Insufficient funds on the account"
 
     def info(self):
         #formatted_balance = f"{self.balance:.2f}".replace('.', ',')
         #return f"Bank Account No: {self.number}\nBalance: PLN {formatted_balance}"
         return f"Bank Account No: {self.number}\nBalance: PLN {f"{self.balance:.2f}".replace('.', ',')}"
-
 if __name__ == "__main__":
     account = BankAccount("12 3456 5555 9090 1111 0000 7722")
     

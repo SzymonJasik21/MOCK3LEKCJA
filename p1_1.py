@@ -12,5 +12,6 @@ def f(word):
 
 if __name__ == "__main__":
     print(f("water"))
-
+    print(f("a"))
+    print(f(""))
 

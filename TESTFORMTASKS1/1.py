@@ -13,11 +13,12 @@ class EBook:
         self.is_open = False
 
     def next_page(self):
-        if self.is_open:
+        if self.is_open == True:
             if self.current_page < self.pages:
                 self.current_page += 1
             return True
-        return "Book is closed"
+        else:
+            return "Book is closed"
 
     def status(self):
         return f"{self.title}, {self.author}, pages: {self.pages}, current: {self.current_page}, open: {self.is_open}"

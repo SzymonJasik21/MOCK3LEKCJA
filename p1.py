@@ -9,7 +9,6 @@ def f(word):
     return "-".join(result)
 
 if __name__ == "__main__":
-    print(f(f"water"))
-    print(f(f"a"))
-
-    
+    print(f("water"))
+    print(f("a"))
+    print(f(""))

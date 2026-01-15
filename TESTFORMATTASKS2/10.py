@@ -1,12 +1,33 @@
-def is_incorrect(base, tolerance_pct):
-    margin = base * (tolerance_pct / 100)
-    return lambda amount: amount < (base - margin) or amount > (base + margin)
+import matplotlib.pyplot as plt
 
-def f(bottles):
-    incorrect_check = is_incorrect(500, 2)
-    wrong_bottles = list(filter(incorrect_check, bottles))
-    return (len(wrong_bottles) / len(bottles)) * 100
+def f(data):
+    countries = list(map(lambda x: x["country"], data))
+    total_medals = list(map(lambda x: x["gold"] + x["silver"] + x["bronze"], data))
+
+    return countries, total_medals
+    
+    #plt.bar(countries, total_medals)
+    #plt.title("Olympic Medals")
+    #plt.xlabel("Countries")
+    #plt.ylabel("Total Medals")
+    #plt.show()
 
 if __name__ == "__main__":
-    bottles = [508,500,512,499,492,511,503,476,501,509]
-    print(f"Incorrectly filled: {f(bottles)}%")
+    olympics = [
+        {"country":"Denmark","gold":2,"silver":4,"bronze":6},
+        {"country":"Finland","gold":5,"silver":0,"bronze":4},
+        {"country":"USA","gold":12,"silver":5,"bronze":11},
+        {"country":"Peru","gold":0,"silver":1,"bronze":7}
+    ]
+
+    countries, total_medals = f(olympics)
+
+    plt.bar(countries, total_medals)
+    plt.title("Olympic Medals")
+    plt.xlabel("Countries")
+    plt.ylabel("Total Medals")
+    plt.show()
+
+   
+
+    

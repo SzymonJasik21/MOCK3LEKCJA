@@ -1,4 +1,4 @@
-import statistics
+import statistics as stat
 
 class Statistics:
     def __init__(self):
@@ -14,7 +14,7 @@ class Statistics:
         return sum(self.numbers) / len(self.numbers) if self.numbers else 0
 
     def get_median(self):
-        return statistics.median(self.numbers) if self.numbers else 0
+        return stat.median(self.numbers) if self.numbers else 0
 
 if __name__ == "__main__":
     s = Statistics()
