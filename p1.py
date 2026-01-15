@@ -1,12 +1,12 @@
 def f(word):
 
-    result = []
+    wave = []
     for i in range(len(word)):
-        chars = list(word.lower())
-        chars[i] = chars[i].upper()
-        result.append("".join(chars))
+        litery = list(word.lower())
+        litery[i] = litery[i].upper()
+        wave.append("".join(litery))
     
-    return "-".join(result)
+    return "-".join(wave)
 
 if __name__ == "__main__":
     print(f("water"))

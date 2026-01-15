@@ -5,29 +5,28 @@ class C:
         self.x = x
         self.y = y
 
-    def get_quadrant(self, x, y):
-        if x == 0 or y == 0:
+    def m1(self):
+        if self.x == 0 or self.y == 0:
             return 0
-        if x > 0 and y > 0:
+        if self.x > 0 and self.y > 0:
             return 1
-        if x < 0 and y > 0:
+        if self.x < 0 and self.y > 0:
             return 2
-        if x < 0 and y < 0:
+        if self.x < 0 and self.y < 0:
             return 3
-        if x > 0 and y < 0:
+        if self.x > 0 and self.y < 0:
             return 4
 
-    def m1(self):
-        return self.get_quadrant(self.x, self.y)
-
     def m2(self, a, b):
-        #return self.m1() == self.get_quadrant(a, b)
-        return self.get_quadrant(self.x, self.y) == self.get_quadrant(a, b)
+        point_q = self.m1()
+        other_q = C(a, b).m1()
+        return point_q == other_q
 
     def m3(self, a, b):
         distance = math.sqrt((self.x - a)**2 + (self.y - b)**2)
         return distance > 5
-
+        
+    
 if __name__ == "__main__":
     p = C(2, 3)
     print(p.m1())
