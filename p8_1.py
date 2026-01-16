@@ -1,14 +1,8 @@
-def f(fnc,prods):
-    string = ""
-
-    for x in prods:
-        string = string + ","+fnc(x)
-    
-    return string.lstrip(",")
-
+def f(fnc, prods):
+    ids = [fnc(p) for p in prods]
+    return ",".join(ids)
 
 if __name__ == "__main__":
-    #print(f(lambda x: (x[0]+x[-1]).upper(), ["water","cheese","tomato"]))
     prods = ["water", "cheese", "tomato"]
     
     fnc1 = lambda x: "id:" + x[:2]
